@@ -1,0 +1,7 @@
+Insecure version:
+- There's a risk that if a user enters special characters like "<" or ">", they could unintentionally mess up the webpage layout or even inject harmful code into the webpage
+    - This could happen because the code doesn't check or modify what the user enters before saving it.
+
+Secure version:
+- Before saving what the user enters, the code first makes sure that any special characters are changed into harmless versions.
+    - Even if a user tries to sneak in something harmful, it gets neutralized before it can cause any trouble.

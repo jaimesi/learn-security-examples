@@ -1,1 +1,11 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+Insecure version:
+- The session cookie is not marked as httpOnly, which means it can be accessed by client-side scripts.
+    - This makes it vulnerable to attacks like cross-site scripting.
+- The secret used to sign the session cookie is hardcoded, which is not recommended for security reasons.
+
+Secure version:
+- Sets the httpOnly flag to true in the session cookie, preventing client-side scripts from accessing it.
+- Uses a dynamic secret key passed as an argument, avoiding hardcoded secrets that could be easily guessed or leaked.
+- Sets the sameSite attribute to mitigate cross-site request forgery attacks.

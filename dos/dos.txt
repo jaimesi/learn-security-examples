@@ -1,2 +1,11 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+While both insecure.js and secure.js are vulnerable to NoSQL injection, insecure.js directly
+uses 'id' in the MongoDB query without any proper validation. Attackers could potentially
+manipulate the query. In secure.js, the code wraps this query in a try-catch block to handle
+potential errors.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Input validation, cleaning user input by removing any characters that could be used for
+injection/attacks, access control to prevent unauthorized access to the data.

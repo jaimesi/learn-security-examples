@@ -1,2 +1,12 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+
+The code in insecure.js lacks proper authentication mechanisms for retrieving messages. This
+would allow anyone to retrieve messages without any authentication. The code in secure.js
+logs requests and messages, which allows administrators to trace actions back to a user or
+IP address.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+- Token-based authentication
+- Encryption to protect sensitive data
+- Access control so only authorized users can perform certain actions

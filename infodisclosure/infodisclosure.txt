@@ -1,3 +1,18 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+Insecure.js is vulnerable to NoSQL injection. It directly uses user-provided input in the MongoDB query
+without sanitization or validation. This makes it susceptible to injection attacks.
+
+Secure.js prevents NoSQL injection by validating and cleaning the user input. It checks if the username
+is a string and then sanitizes it by removing non-alphanumeric characters before querying the database.
+
 Which CIA property does tampering violate?
+
+It violates the integrity property of CIA. By tampering with data or code, the integrity of the system
+is compromised as it can lead to unauthorized modifications, potentially causing security breaches.
+
 What additional security mechanisms can you incorporate?
+
+- Input validation and sanitization for all user inputs.
+- Logging and monitoring to detect and respond to suspicious activities.
+- Encrypting sensitive data at rest and in transit.

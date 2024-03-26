@@ -1,0 +1,10 @@
+While both insecure.js and secure.js are vulnerable to privilege escalation, insecure.js
+allows users to update their roles without any proper authorization or authentication. Any
+user is able to manipulate their role. In secure.js, session-based authentication and
+authorization is implemented. It checks if the user is logged in by verifying if there is a
+session ID present. It also verifies if the user has administrative privileges.
+
+For additional security measurements:
+- Use HTTPS to encrypt data being transmitted between the client and server. This would
+prevent tampering.
+- Multi-factor authentication for an extra layer of security.
